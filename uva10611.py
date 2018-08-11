@@ -19,14 +19,12 @@ def mostrar(lista, a, b, x):
 def buscaAltura(x, MIN, MAX, lista):
     
     if(MIN > MAX):
-        #print(str(MAX)+" "+str(MIN))
         mostrar(lista, MAX, MIN, x)
         return
 
     mid = (MAX+MIN) // 2
 
     if(lista[mid] == x):
-        #print(str(mid-1)+" "+str(mid+1))
         mostrar(lista, mid-1, mid+1, x)
     elif(lista[mid] > x):
         buscaAltura(x, MIN, mid-1, lista)
@@ -44,6 +42,4 @@ Q = int(input())
 busca = [int(x) for x in input().split()]
 
 for x in busca:
-    #print(x)
     buscaAltura(x, 0, N-1, alturas)
-    #print("")
